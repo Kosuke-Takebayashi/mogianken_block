@@ -8,6 +8,14 @@ function my_theme_set_up()
 	register_nav_menu('main-menu', 'header navigation'); // カスタムメニューを作成
 	register_nav_menu('main-menu-sp', 'header navigation sp');
 	register_nav_menu('footer-menu', 'footer navigation'); 
+	$defaults = array(
+		'height'      => 100,
+		'width'       => 400,
+		'flex-height' => true,
+		'flex-width'  => true,
+		'header-text' => array( 'site-title', 'site-description' ),
+	);
+	add_theme_support( 'custom-logo', $defaults );
 }
 add_action('after_setup_theme', 'my_theme_set_up');
 

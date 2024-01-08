@@ -123,7 +123,7 @@ button {
 }
 
 @media screen and (max-width: 1440px) {
-    .header-logo__img {
+    .header-logo img {
         width: 150px;
         height: auto;
     }
@@ -153,7 +153,7 @@ button {
         padding: 5px 0px 5px 15px;
     }
 
-    .header-logo__img {
+    .header-logo img {
         width: 116px;
         height: auto;
     }

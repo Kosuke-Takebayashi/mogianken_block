@@ -32,7 +32,13 @@
 
             <!-- ロゴ -->
             <div class="header-logo">
-                <h1><a href="<?php echo esc_url(home_url()); ?>"><img src="<?php echo esc_url($header_logo); ?>" alt="テックコーポレートのロゴ" class="header-logo__img" width="204" height="70"></a></h1>
+                <h1><a href="<?php echo esc_url(home_url()); ?>">
+                    <?php if(is_home() || is_front_page()): ?>
+                        <?php echo get_custom_logo(); ?>
+                    <?php else: ?>
+                        <img src="<?php echo esc_url($header_logo); ?>" alt="テックコーポレートのロゴ" class="header-logo__img" width="204" height="70">
+                    <?php endif; ?>
+            </a></h1>
             </div>
 
             <!-- グローバルナビゲーション -->
