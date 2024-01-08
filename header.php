@@ -61,23 +61,11 @@
             <div class="hamburger-menu-wrapper" id="hamburger-menu-wrapper">
                 <div class="header-inner"><a href="<?php echo esc_url(home_url()); ?>"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/logo-header-hamburger.svg" alt="" class="hamburger-menu-logo" width="117" height="40"></a></div>
                 <nav class="header-nav--sp hamburger-menu">
-                    <ul class='header-nav__list--sp'>
-                        <li class="header-nav__item--sp">
-                            <a href="<?php echo esc_url(home_url()); ?>/about" class="header-nav__link--sp <?php echo (is_home() || is_front_page()) ? "header-nav__link--top-page" : ""; ?>">About us</a>
-                        </li>
-                        <li class="header-nav__item--sp">
-                            <a href="<?php echo esc_url(home_url()); ?>/service" class="header-nav__link--sp <?php echo (is_home() || is_front_page()) ? "header-nav__link--top-page" : ""; ?>">Service</a>
-                        </li>
-                        <li class="header-nav__item--sp">
-                            <a href="<?php echo esc_url(home_url()); ?>/company" class="header-nav__link--sp <?php echo (is_home() || is_front_page()) ? "header-nav__link--top-page" : ""; ?>">Company</a>
-                        </li>
-                        <li class="header-nav__item--sp">
-                            <a href="<?php echo esc_url(home_url()); ?>/news" class="header-nav__link--sp <?php echo (is_home() || is_front_page()) ? "header-nav__link--top-page" : ""; ?>">News</a>
-                        </li>
-                        <li class="header-nav__item--sp">
-                            <a href="<?php echo esc_url(home_url()); ?>/contact" class="header-nav__link--sp <?php echo (is_home() || is_front_page()) ? "header-nav__link--top-page" : ""; ?>">Contact</a>
-                        </li>
-                    </ul>
+                    <?php wp_nav_menu(array(
+                    'theme_location' => 'main-menu-sp',
+                    'menu_class' => 'header-nav__list--sp',
+                    'container' => false,
+                )) ?>
                 </nav>
             </div>
 

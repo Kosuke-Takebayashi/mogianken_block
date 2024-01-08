@@ -179,12 +179,12 @@ button {
         padding: 15.5% 6.4% 0;
     }
 
-    .header-nav__item--sp {
+    .header-nav__list--sp li {
         position: relative;
         border-bottom: 1px solid #000;
     }
 
-    .header-nav__item--sp::after {
+    .header-nav__list--sp li::after {
         content: url("../img/icon-humberger-arrow.svg");
         position: absolute;
         top: 50%;
@@ -192,7 +192,7 @@ button {
         transform: translateY(-50%);
     }
 
-    .header-nav__link--sp {
+    .header-nav__list--sp a {
         display: inline-block;
         color: #000;
         font-size: 30px;

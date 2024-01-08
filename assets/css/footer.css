@@ -76,13 +76,13 @@
     color: #fff;
 }
 
-.footer__nav-list {
+.footer-nav {
     display: flex;
     gap: 32px;
     align-items: center;
 }
 
-.footer__nav-link {
+.footer-nav a {
     font-size: 18px;
     line-height: 3.06;
     color: #fff;
@@ -163,18 +163,18 @@
         height: auto;
     }
 
-    .footer__nav-list {
+    .footer-nav {
         flex-direction: column;
         gap: 0;
         width: 100%;
         align-items: flex-start;
     }
-    .footer__nav-item {
+    .footer-nav li {
         border-bottom: 1px solid #393A3C;
         width: 100%;
     }
 
-    .footer__nav-link {
+    .footer-nav a {
         font-size: 16px;
         display: inline-block;
         width: 100%;

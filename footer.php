@@ -24,13 +24,11 @@
                 <a href="<?php echo esc_url(home_url()); ?>" class="footer-logo"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/icon-footer-logo.svg" alt="" width="23" height="17">Tech Corporate</a>
 
                 <!-- フッターメニュー -->
-                <ul class="footer__nav-list">
-                    <li class="footer__nav-item"><a href="<?php echo esc_url(home_url()); ?>/news" class="footer__nav-link">News</a></li>
-                    <li class="footer__nav-item"><a href="<?php echo esc_url(home_url()); ?>/about" class="footer__nav-link">About us</a></li>
-                    <li class="footer__nav-item"><a href="<?php echo esc_url(home_url()); ?>/service" class="footer__nav-link">Service</a></li>
-                    <li class="footer__nav-item"><a href="<?php echo esc_url(home_url()); ?>/" class="footer__nav-link">Member</a></li>
-                    <li class="footer__nav-item"><a href="<?php echo esc_url(home_url()); ?>/contact" class="footer__nav-link">Contact</a></li>
-                </ul>
+                <?php wp_nav_menu(array(
+                    'theme_location' => 'footer-menu',
+                    'menu_class' => 'footer-nav',
+                    'container' => false,
+                )) ?>
 
             </div>
 
