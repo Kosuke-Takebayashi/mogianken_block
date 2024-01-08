@@ -84,3 +84,44 @@ function my_add_files()
 }
 add_action('wp_enqueue_scripts', 'my_add_files');
 
+function my_customize( $wp_customize ) {
+
+	$wp_customize->add_panel(
+		'my_footer-logo-panel',
+		array(
+			'title'    => 'フッター',
+			'priority' => 1,
+		)
+	);
+	
+	$wp_customize->add_section(
+		'my_footer-logo-section',
+		array(
+			'title'    => 'ロゴ',
+			'panel'    => 'my_footer-logo-panel',
+			'priority' => 1,
+		)
+	);
+	
+	$wp_customize->add_setting( 'my_footer-logo-setting' );
+	$wp_customize->add_control(
+		new WP_Customize_Image_Control(
+			$wp_customize,
+			'my_control',
+			array(
+				'label'    => 'フッターロゴ',
+				'section'  => 'my_footer-logo-section',
+				'settings' => 'my_footer-logo-setting',
+				'priority' => 1,
+			)
+		)
+	);
+}
+add_action( 'customize_register', 'my_customize' );
+
+function my_wp_footerLogo() {
+	if ( get_theme_mod( 'my_footer-logo-setting' ) ) {
+		echo get_theme_mod('my_footer-logo-setting');
+	}
+}
+

@@ -21,7 +21,8 @@
             <div class="footer-content-inner">
 
                 <!-- フッターロゴ -->
-                <a href="<?php echo esc_url(home_url()); ?>" class="footer-logo"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/icon-footer-logo.svg" alt="" width="23" height="17">Tech Corporate</a>
+                <a href="<?php echo esc_url(home_url()); ?>" class="footer-logo"><img src="<?php my_wp_footerLogo(); ?>" alt="" width="" height=""></a>
+                
 
                 <!-- フッターメニュー -->
                 <?php wp_nav_menu(array(
