@@ -1,0 +1,39 @@
+<div class="company-overview-wrapper">
+    <table class="company-overview">
+        <tr>
+            <th>会社名</th>
+            <td>株式会社テックコーポレート</td>
+        </tr>
+        <tr>
+            <th>設立</th>
+            <td>20XX年X月X日</td>
+        </tr>
+        <tr>
+            <th>代表者</th>
+            <td>テック 太郎</td>
+        </tr>
+        <tr>
+            <th>資本金</th>
+            <td>5,000,000万円</td>
+        </tr>
+        <tr>
+            <th>従業員数</th>
+            <td>15名</td>
+        </tr>
+        <tr>
+            <th>事業内容</th>
+            <td>テキストテキストテキスト
+                テキストテキストテキスト</td>
+        </tr>
+        <tr>
+            <th>住所</th>
+            <td>〒123-1234<br>
+                東京都東京区東京町1-1-1</td>
+        </tr>
+        <tr>
+            <th>お問い合わせ</th>
+            <td>Tel：080–1234-5678<br>
+                Mail：xxx@xxx.xx</td>
+        </tr>
+    </table>
+</div>

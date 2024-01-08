@@ -1,0 +1,225 @@
+@charset "utf-8";
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 32px;
+}
+
+/* ナビゲーション */
+.header-nav {
+    display: flex;
+    gap: 32px;
+}
+
+.header-nav__list {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.header-nav a {
+    color: #000;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.header-nav--top-page a:not(.header-contact-button__link--top-page) {
+    color: #fff;
+}
+
+.header-nav__link {
+    color: #000;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.header-contact-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    width: 106px;
+    background-color: #003C8A;
+}
+
+.header-contact-button--top-page {
+    background-color: #fff;
+}
+
+.header-nav .header-contact-button__link {
+    color: #fff;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    padding-top: 10px;
+}
+
+.header-nav .header-contact-button__link--top-page {
+    color: #003C8A;
+}
+
+.hamburger-menu-wrapper {
+    display: none;
+}
+
+/* ハンバーガーボタン */
+button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+}
+
+.hamburger-button {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+    z-index: 9999;
+}
+
+.hamburger-bar {
+    display: inline-block;
+    width: 25px;
+    border: 1px solid #003C8A;
+}
+
+.hamburger-bar-1,
+.hamburger-bar-2,
+.hamburger-bar-3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.hamburger-bar-1 {
+    transform: translateX(-50%) translateY(calc(-50% - 8px));
+}
+
+.hamburger-bar-2 {
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.hamburger-bar-3 {
+    transform: translateX(-50%) translateY(calc(-50% + 8px));
+}
+
+@media screen and (max-width: 1440px) {
+    .header-logo__img {
+        width: 150px;
+        height: auto;
+    }
+
+    .header-contact-button {
+        height: 70px;
+        width: 93px;
+    }
+
+    .header-contact-button__img {
+        width: 25px;
+        height: auto;
+    }
+
+    .header-nav .header-contact-button__link {
+        padding-top: 5px;
+        gap: 3px;
+    }
+
+    .header-nav a {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .header-inner {
+        padding: 5px 0px 5px 15px;
+    }
+
+    .header-logo__img {
+        width: 116px;
+        height: auto;
+    }
+
+    .header-nav {
+        display: none;
+    }
+
+    .hamburger-menu-wrapper {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        visibility: hidden;
+        opacity: 0;
+        height: 100vh;
+        width: 100%;
+        background-color: #fff;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    .header-nav--sp {
+        padding: 15.5% 6.4% 0;
+    }
+
+    .header-nav__item--sp {
+        position: relative;
+        border-bottom: 1px solid #000;
+    }
+
+    .header-nav__item--sp::after {
+        content: url("../img/icon-humberger-arrow.svg");
+        position: absolute;
+        top: 50%;
+        right: 15px;
+        transform: translateY(-50%);
+    }
+
+    .header-nav__link--sp {
+        display: inline-block;
+        color: #000;
+        font-size: 30px;
+        width: 100%;
+        font-weight: 600;
+        padding: 15px;
+    }
+
+    .hamburger-menu-wrapper.is-open {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    /* ハンバーガーボタン */
+    .hamburger-button {
+        display: block;
+    }
+
+    .hamburger-button.is-active .hamburger-bar-1 {
+        transform: translateY(-1px) translateX(-50%) rotate(-45deg);
+    }
+
+    .hamburger-button.is-active .hamburger-bar-2 {
+        opacity: 0;
+    }
+
+    .hamburger-button.is-active .hamburger-bar-3 {
+        transform: translateY(-1px) translateX(-50%) rotate(45deg);
+    }
+
+}

@@ -1,0 +1,64 @@
+@charset "utf-8";
+
+/* メインビジュアル */
+.sub-mv-inner {
+    padding-top: 12%;
+}
+
+.sub-mv-text {
+    color: #003C8A;
+    padding-left: 10%;
+    font-size: clamp(4.375rem, 2.232rem + 3.35vw, 6.25rem);
+    margin-bottom: 0.81em;
+}
+
+.sub-mv-main-text {
+    font-weight: 500;
+}
+
+.sub-mv-sub-text {
+    font-size: clamp(1.05rem, 0.536rem + 0.8vw, 1.5rem);
+    line-height: 2.04;
+}
+
+.sub-mv__img img {
+    width: 100%;
+    height: auto;
+}
+
+/* Our Advantage */
+.advantage__section-content,
+.feature__section-content {
+    margin-bottom: 80px;
+}
+
+@media screen and (max-width: 1180px) {
+    .sub-mv-text {
+        padding-left: 5%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .sub-mv-inner {
+        padding-top: 24.8%;
+    }
+
+    .sub-mv-text {
+        font-size: 40px;
+        padding-left: 6.4%;
+        margin-bottom: 54px;
+    }
+
+    .sub-mv-main-text {
+        line-height: 1;
+    }
+
+    .sub-mv-sub-text {
+        font-size: 12px;
+    }
+
+    .advantage__section-content,
+    .feature__section-content {
+        margin-bottom: 31px;
+    }
+}
