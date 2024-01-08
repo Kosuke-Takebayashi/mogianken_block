@@ -18,10 +18,11 @@
 /* ナビゲーション */
 .header-nav {
     display: flex;
+    align-items: center;
     gap: 32px;
 }
 
-.header-nav__list {
+.header-nav ul {
     display: flex;
     align-items: center;
     gap: 32px;
